@@ -23,7 +23,7 @@ public class MainTaskActivity extends Activity {
  
         buttonClick = (Button) findViewById(R.id.buttonAlert);
  
-        // add listener to button 
+        // add listener to button test
         buttonClick.setOnClickListener(new OnClickListener() {
         	
         	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
