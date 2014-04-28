@@ -20,6 +20,7 @@ private static int RESULT_LOAD_IMAGE = 1;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_task);
 
 		Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);

@@ -1345,7 +1345,7 @@ containing a value of this type.
         public static final int btn_info=0x7f05005e;
         public static final int btn_joinGroup=0x7f05005d;
         public static final int button1=0x7f050044;
-        public static final int button2=0x7f05004c;
+        public static final int button2=0x7f05004a;
         public static final int buttonAlert=0x7f050062;
         public static final int buttonLoadPicture=0x7f05003d;
         public static final int checkBox1=0x7f050063;
@@ -1372,9 +1372,9 @@ containing a value of this type.
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imageLogo=0x7f05005b;
-        public static final int imageView1=0x7f05004a;
+        public static final int imageView1=0x7f05004b;
         public static final int imageView2=0x7f05004d;
-        public static final int imageView5=0x7f05004b;
+        public static final int imageView5=0x7f05004c;
         public static final int imgView=0x7f05003c;
         public static final int label=0x7f050055;
         public static final int listMode=0x7f050001;
