@@ -116,5 +116,6 @@
     <string name="title_activity_upload_pic">UploadPicActivity</string>
     <string name="title_activity_task">TaskActivity</string>
     <string name="title_activity_main_task">MainTaskActivity</string>
+    <string name="priceInput">Price:</string>
 
 </resources>

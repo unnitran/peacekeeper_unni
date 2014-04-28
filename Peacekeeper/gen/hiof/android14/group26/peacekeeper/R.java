@@ -1330,27 +1330,27 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05006a;
+        public static final int action_settings=0x7f05006b;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int add_task=0x7f050069;
+        public static final int add_task=0x7f05006a;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int btnAccountNotification=0x7f050066;
-        public static final int btnAccountSettings=0x7f050065;
+        public static final int btnAccountNotification=0x7f050067;
+        public static final int btnAccountSettings=0x7f050066;
         public static final int btnCreateAccount=0x7f05004e;
         public static final int btnCreateGroup=0x7f050050;
         public static final int btnLogIn=0x7f050060;
-        public static final int btnLogOut=0x7f050067;
+        public static final int btnLogOut=0x7f050068;
         public static final int btn_createGroup=0x7f05005c;
         public static final int btn_info=0x7f05005e;
         public static final int btn_joinGroup=0x7f05005d;
         public static final int button1=0x7f050044;
         public static final int button2=0x7f05004c;
-        public static final int buttonAlert=0x7f050061;
+        public static final int buttonAlert=0x7f050062;
         public static final int buttonLoadPicture=0x7f05003d;
-        public static final int checkBox1=0x7f050062;
-        public static final int checkBox2=0x7f050063;
-        public static final int checkBox3=0x7f050064;
+        public static final int checkBox1=0x7f050063;
+        public static final int checkBox2=0x7f050064;
+        public static final int checkBox3=0x7f050065;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int counter=0x7f050051;
@@ -1386,7 +1386,7 @@ containing a value of this type.
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int pager=0x7f050046;
-        public static final int price=0x7f050068;
+        public static final int price=0x7f050069;
         public static final int progressBar=0x7f05005f;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
@@ -1416,6 +1416,7 @@ containing a value of this type.
         public static final int textView4=0x7f050052;
         public static final int textView5=0x7f050053;
         public static final int textView6=0x7f050054;
+        public static final int textView8=0x7f050061;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1494,9 +1495,8 @@ containing a value of this type.
         public static final int notifications=0x7f03002b;
         public static final int settings=0x7f03002c;
         public static final int support_simple_spinner_dropdown_item=0x7f03002d;
-        public static final int task=0x7f03002e;
-        public static final int task_price_alert=0x7f03002f;
-        public static final int thegroup=0x7f030030;
+        public static final int task_price_alert=0x7f03002e;
+        public static final int thegroup=0x7f03002f;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -1608,6 +1608,7 @@ containing a value of this type.
         public static final int oweRobin=0x7f0a0044;
         public static final int passwordInput=0x7f0a0027;
         public static final int plus=0x7f0a0024;
+        public static final int priceInput=0x7f0a0061;
         public static final int responsibleInput=0x7f0a0038;
         public static final int robinBought=0x7f0a0046;
         public static final int robinKarlsen=0x7f0a003e;

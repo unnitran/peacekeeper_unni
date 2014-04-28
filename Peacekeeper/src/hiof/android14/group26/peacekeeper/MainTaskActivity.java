@@ -14,68 +14,53 @@ import android.widget.Toast;
 
 public class MainTaskActivity extends Activity {
 
-	private Button buttonClick;
-	 
-    public void onCreate(Bundle savedInstanceState) {
-    	
-    	final Context context = this;
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_task);
+	final Context context = this;
+	private Button button;
  
-        buttonClick = (Button) findViewById(R.id.buttonAlert);
+	public void onCreate(Bundle savedInstanceState) {
  
-        // add listener to button test
-        buttonClick.setOnClickListener(new OnClickListener() {
-        	
-        	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-    				context);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main_task);
  
-            @Override
-            public void onClick(View arg0) {
+		button = (Button) findViewById(R.id.buttonAlert);
  
-            	Toast.makeText(MainTaskActivity.this,"Menu item 2 selected",Toast.LENGTH_SHORT).show();
-            	
-                // Create custom dialog object
-                final Dialog dialog = new Dialog(MainTaskActivity.this);
-                // Include dialog.xml file
-                dialog.setContentView(R.layout.task_price_alert);
-                // Set dialog title
-                dialog.setTitle("Custom Dialog");
+		// add button listener
+		button.setOnClickListener(new OnClickListener() {
  
-                // set values for custom dialog components - text, image and button
-                TextView text = (TextView) dialog.findViewById(R.id.price);
-                text.setText("Custom dialog Android example.");
+		@Override
+		public void onClick(View arg0) {
  
-             // set title
-    			alertDialogBuilder.setTitle("Your Title");
-     
-    			// set dialog message
-    			alertDialogBuilder
-    				.setMessage("Click yes to exit!")
-    				.setCancelable(false)
-    				.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, close
-    						// current activity
-    						MainTaskActivity.this.finish();
-    					}
-    				  })
-    				.setNegativeButton("No",new DialogInterface.OnClickListener() {
-    					public void onClick(DialogInterface dialog,int id) {
-    						// if this button is clicked, just close
-    						// the dialog box and do nothing
-    						dialog.cancel();
-    					}
-    				});
-     
-    				// create alert dialog
-    				AlertDialog alertDialog = alertDialogBuilder.create();
-     
-    				// show it
-    				alertDialog.show();
-    			}
-    		});
+			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+				context);
  
-    }
+			// set title
+			alertDialogBuilder.setTitle("Your Title");
  
+			// set dialog message
+			alertDialogBuilder
+				.setMessage("Click yes to exit!")
+				.setCancelable(false)
+				.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog,int id) {
+						// if this button is clicked, close
+						// current activity
+						MainTaskActivity.this.finish();
+					}
+				  })
+				.setNegativeButton("No",new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog,int id) {
+						// if this button is clicked, just close
+						// the dialog box and do nothing
+						dialog.cancel();
+					}
+				});
+ 
+				// create alert dialog
+				AlertDialog alertDialog = alertDialogBuilder.create();
+ 
+				// show it
+				alertDialog.show();
+			}
+		});
+	}
 }

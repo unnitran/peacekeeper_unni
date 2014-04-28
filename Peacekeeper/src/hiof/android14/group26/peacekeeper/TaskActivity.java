@@ -20,7 +20,7 @@ private static int RESULT_LOAD_IMAGE = 1;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.account_settings);
+		setContentView(R.layout.activity_task);
 
 		Button buttonLoadImage = (Button) findViewById(R.id.buttonLoadPicture);
 		buttonLoadImage.setOnClickListener(new View.OnClickListener() {
