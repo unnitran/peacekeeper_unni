@@ -9,13 +9,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="hiof.android14.group26.peacekeeper.MainActivity" 
-    />
+<android.support.v4.view.ViewPager
+		    xmlns:android="http://schemas.android.com/apk/res/android"
+		    xmlns:tools="http://schemas.android.com/tools"
+		    android:id="@+id/pager"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    tools:context="hiof.android14.group26.peacekeeper.MainActivity" >
+		    
+</android.support.v4.view.ViewPager>
 
 <android.support.v4.widget.DrawerLayout
        xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,6 +31,9 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent" />
        
+
+		
+       
        <!-- Listview to display slider menu -->
        <ListView 
            android:id="@+id/list_slidermenu" 
@@ -40,7 +45,7 @@
            android:dividerHeight="1dp"
            android:listSelector="@drawable/list_selector"
            android:background="@color/ProjectGreenBlue" />
-             
+
    </android.support.v4.widget.DrawerLayout>
 
 
