@@ -30,22 +30,22 @@ public class IntroGroupActivity extends Activity {
 	}
 	
 	public void showInfo(View view){
-		// prepare the alert box                  
+		// Getting the alert box for use later on                 
 	    AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
 	    
 	    // Strings used
 	    String okBtn = getResources().getString(R.string.ok);
 	    String alertBoxContent = getResources().getString(R.string.infoBox);
 	     
-	    // set the message to display
+	    // Set the message to display
 	    alertbox.setMessage(alertBoxContent);
 	     
-	    // add a neutral button to the alert box and assign a click listener
+	    // Add a neutral button to the alert box and assign a click listener
 	    alertbox.setNeutralButton(okBtn, new DialogInterface.OnClickListener() {
 	         
-	        // click listener on the alert box
+	        // Click listener on the alert box
 	        public void onClick(DialogInterface arg0, int arg1) {
-	            // the button was clicked
+	            // The button was clicked - alert box closes.	        	
 	        }
 	    });
 	     
