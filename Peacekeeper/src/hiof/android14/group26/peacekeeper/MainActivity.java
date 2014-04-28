@@ -251,13 +251,17 @@ public class MainActivity extends ActionBarActivity implements
 		public Fragment getItem(int position) {
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a PlaceholderFragment (defined as a static inner class below).
+			Fragment fragment = null;
 			if(position==0){
-				AllTasksFragment fragment = new AllTasksFragment();
+				fragment = new AllTasksFragment();
 				return fragment;
 			}
-			else{
-				return PlaceholderFragment.newInstance(position + 1);
+			else if(position==1){
+				fragment = new OpenTasksFragment();
+				return fragment;
 			}
+			else
+				return PlaceholderFragment.newInstance(position + 1);
 			
 		}
 
