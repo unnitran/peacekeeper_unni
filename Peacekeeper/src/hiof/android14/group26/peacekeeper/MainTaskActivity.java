@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainTaskActivity extends Activity {
 
@@ -32,6 +33,8 @@ public class MainTaskActivity extends Activity {
             @Override
             public void onClick(View arg0) {
  
+            	Toast.makeText(MainTaskActivity.this,"Menu item 2 selected",Toast.LENGTH_SHORT).show();
+            	
                 // Create custom dialog object
                 final Dialog dialog = new Dialog(MainTaskActivity.this);
                 // Include dialog.xml file

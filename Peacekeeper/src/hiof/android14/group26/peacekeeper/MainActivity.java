@@ -208,7 +208,9 @@ public class MainActivity extends ActionBarActivity implements
         switch (item.getItemId()) {
         case R.id.add_task:
         	//TODO: remove toast, add activity
-        	Toast.makeText(this,"Menu item 2 selected",Toast.LENGTH_SHORT).show();
+        	//Toast.makeText(this,"Menu item 2 selected",Toast.LENGTH_SHORT).show();
+        	AddTaskFragment fragment = new AddTaskFragment();
+        	changeFragment(fragment);
             break;
         default:
             //return super.onOptionsItemSelected(item);
