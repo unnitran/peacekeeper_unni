@@ -56,7 +56,8 @@
         android:orientation="vertical" >
         
         <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnLoggedIn"
+        android:onClick="startLoggedInActivity"
         android:layout_marginTop="30dp"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"

@@ -66,6 +66,7 @@
 
         <Button
             android:id="@+id/btnCreateAccount"
+            android:onClick="startIntroGroupActivity"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
             android:layout_height="35dp"

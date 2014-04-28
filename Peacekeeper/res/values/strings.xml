@@ -116,6 +116,9 @@
     <string name="title_activity_upload_pic">UploadPicActivity</string>
     <string name="title_activity_task">Add Task</string>
     <string name="title_activity_main_task">Task</string>
+    <string name="title_intro_group">Groups</string>
+    <string name="title_create_group">Create Group</string>
+    <string name="title_join_group">Join Group</string>
     <string name="priceInput">Price:</string>
 
 </resources>

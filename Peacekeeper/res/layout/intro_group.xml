@@ -29,6 +29,7 @@
 
         <Button
             android:id="@+id/btn_createGroup"
+            android:onClick="startCreateGroupActivity"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:text="@string/createGroup"
@@ -36,6 +37,7 @@
 
         <Button
             android:id="@+id/btn_joinGroup"
+            android:onClick="startJoinGroupActivity"
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:text="@string/joinGroup"
