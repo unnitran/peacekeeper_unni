@@ -11,10 +11,11 @@ public class HouseholdHasTasksTable {
 	
 	private static final String DATABASE_CREATE_HOUSEHOLD_HAS_TASKS= 
 			  "create table " + TABLE_HOUSEHOLD_HAS_TASKS + "(" + 
-			  COLUMN_TASK_ID + " integer primary key " +
+			  COLUMN_TASK_ID + " integer primary key, " +
+			  COLUMN_HOUSEHOLD_ID + " integer not null, " +
 			  " FOREIGN KEY (" + COLUMN_TASK_ID + ") REFERENCES task (_id)," +
-			  COLUMN_HOUSEHOLD_ID + " integer not null " +
-			  " FOREIGN KEY (" + COLUMN_HOUSEHOLD_ID + ") REFERENCES user (_id)," + ");";
+			  
+			  " FOREIGN KEY (" + COLUMN_HOUSEHOLD_ID + ") REFERENCES user (_id)" + ");";
 	
 	public static void onCreate(SQLiteDatabase database) {
 		database.execSQL(DATABASE_CREATE_HOUSEHOLD_HAS_TASKS);

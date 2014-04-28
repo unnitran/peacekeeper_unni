@@ -1330,9 +1330,9 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05006b;
+        public static final int action_settings=0x7f05006e;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int add_task=0x7f05006a;
+        public static final int add_task=0x7f05006d;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
         public static final int btnAccountNotification=0x7f050067;
@@ -1345,7 +1345,7 @@ containing a value of this type.
         public static final int btn_info=0x7f05005e;
         public static final int btn_joinGroup=0x7f05005d;
         public static final int button1=0x7f050044;
-        public static final int button2=0x7f05004c;
+        public static final int button2=0x7f05004a;
         public static final int buttonAlert=0x7f050062;
         public static final int buttonLoadPicture=0x7f05003d;
         public static final int checkBox1=0x7f050063;
@@ -1359,6 +1359,7 @@ containing a value of this type.
         public static final int disableHome=0x7f050008;
         public static final int drawer_layout=0x7f050047;
         public static final int dropdown=0x7f05000f;
+        public static final int due_date=0x7f05006a;
         public static final int editText1=0x7f05003f;
         public static final int editText2=0x7f050041;
         public static final int edit_query=0x7f050030;
@@ -1372,9 +1373,9 @@ containing a value of this type.
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imageLogo=0x7f05005b;
-        public static final int imageView1=0x7f05004a;
+        public static final int imageView1=0x7f05004b;
         public static final int imageView2=0x7f05004d;
-        public static final int imageView5=0x7f05004b;
+        public static final int imageView5=0x7f05004c;
         public static final int imgView=0x7f05003c;
         public static final int label=0x7f050055;
         public static final int listMode=0x7f050001;
@@ -1386,11 +1387,12 @@ containing a value of this type.
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int pager=0x7f050046;
-        public static final int price=0x7f050069;
+        public static final int price=0x7f05006c;
         public static final int progressBar=0x7f05005f;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
+        public static final int responsible=0x7f05006b;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1410,6 +1412,7 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
+        public static final int task_desc=0x7f050069;
         public static final int textView1=0x7f05003e;
         public static final int textView2=0x7f050040;
         public static final int textView3=0x7f050042;
@@ -1495,8 +1498,9 @@ containing a value of this type.
         public static final int notifications=0x7f03002b;
         public static final int settings=0x7f03002c;
         public static final int support_simple_spinner_dropdown_item=0x7f03002d;
-        public static final int task_price_alert=0x7f03002e;
-        public static final int thegroup=0x7f03002f;
+        public static final int task_list=0x7f03002e;
+        public static final int task_price_alert=0x7f03002f;
+        public static final int thegroup=0x7f030030;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;

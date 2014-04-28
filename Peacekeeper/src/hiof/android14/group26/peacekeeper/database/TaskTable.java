@@ -18,11 +18,11 @@ public class TaskTable {
 			  COLUMN_ID + " integer primary key autoincrement, " + 
 			  COLUMN_DESCRIPTION + " text not null, " +
 			  COLUMN_CREATION_DATE + " text not null, " +
-			  COLUMN_PRICE + "real, " +
+			  COLUMN_PRICE + " real, " +
 			  COLUMN_DUE_DATE + " text not null, " +
-			  COLUMN_CREATOR + " integer not null " +
-			  " FOREIGN KEY (" + COLUMN_CREATOR + ") REFERENCES user (_id)," +
-			  COLUMN_RESPONSIBLE + " integer " + 
+			  COLUMN_CREATOR + " integer not null," +
+			  COLUMN_RESPONSIBLE + " integer," + 
+			  " FOREIGN KEY (" + COLUMN_CREATOR + ") REFERENCES user (_id), " +
 			  " FOREIGN KEY (" + COLUMN_RESPONSIBLE + ") REFERENCES user (_id));";
 
 

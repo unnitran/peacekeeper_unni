@@ -11,7 +11,7 @@ public class HouseholdTable {
 	private static final String DATABASE_CREATE_HOUSEHOLD = 
 			  "create table " + TABLE_HOUSEHOLD + "(" + 
 			  COLUMN_ID + " integer primary key autoincrement, " +
-			  COLUMN_NAME + " text not null, " + ");";
+			  COLUMN_NAME + " text not null " + ");";
 	
 	public static void onCreate(SQLiteDatabase database) {
 		database.execSQL(DATABASE_CREATE_HOUSEHOLD);

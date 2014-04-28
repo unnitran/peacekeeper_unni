@@ -26,18 +26,18 @@ public class TasksDataSource {
 					TaskTable.COLUMN_DUE_DATE,
 					TaskTable.COLUMN_CREATOR,
 					TaskTable.COLUMN_RESPONSIBLE};
-	
-	
-	
 					
 	private String[] allHouseholdHasTasksColumns = {
 					HouseholdHasTasksTable.COLUMN_TASK_ID,
 					HouseholdHasTasksTable.COLUMN_HOUSEHOLD_ID};
 
+	public TasksDataSource(Context context) {
+		dbHelper = new SQLiteHelper(context);
+	}
 	
 	
 	//Create task without responsible household member
-	public Tasks createTaskNoResponsibleHouseholdMember(String description,int price, String creation_date, String due_date, String creator){
+	public Tasks createTaskNoResponsibleHouseholdMember(String description, double price, String creation_date, String due_date, int creator){
 		ContentValues values = new ContentValues();
 		
 		values.put(TaskTable.COLUMN_DESCRIPTION, description);

@@ -19,8 +19,8 @@ public class UserTable {
 			  COLUMN_LAST_NAME + " text not null, " +
 			  COLUMN_EMAIL + " text not null, " +
 			  COLUMN_PASSWORD + " integer not null, " +
-			  COLUMN_HOUSEHOLD_ID + " integer " + 
-			  " FOREIGN KEY (" + COLUMN_HOUSEHOLD_ID + ") REFERENCES household (_id));";
+			  COLUMN_HOUSEHOLD_ID + " integer, " + 
+			  "FOREIGN KEY (" + COLUMN_HOUSEHOLD_ID + ") REFERENCES household (_id));";
 	
 	public static void onCreate(SQLiteDatabase database) {
 		database.execSQL(DATABASE_CREATE_USER);

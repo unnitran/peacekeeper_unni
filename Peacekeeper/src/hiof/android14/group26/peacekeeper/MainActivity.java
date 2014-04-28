@@ -1,5 +1,7 @@
 package hiof.android14.group26.peacekeeper;
 
+import hiof.android14.group26.peacekeeper.database.TasksDataSource;
+import hiof.android14.group26.peacekeeper.models.Tasks;
 import hiof.android14.group26.peacekeeper.slidingMenu.FinancialsFragment;
 import hiof.android14.group26.peacekeeper.slidingMenu.GroupFragment;
 import hiof.android14.group26.peacekeeper.slidingMenu.HistoryFragment;
@@ -19,6 +21,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -59,6 +62,8 @@ public class MainActivity extends ActionBarActivity implements
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 	
+    // database items
+    private static TasksDataSource datasource;
 	
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -69,6 +74,10 @@ public class MainActivity extends ActionBarActivity implements
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
+	public static TasksDataSource getDatasource() {
+		return datasource;
+	}
+
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
@@ -78,6 +87,9 @@ public class MainActivity extends ActionBarActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		datasource = new TasksDataSource(this);
+		datasource.open();
 		
 		// Set up the action bar.
 		final ActionBar actionBar = getSupportActionBar();
@@ -420,7 +432,10 @@ public class MainActivity extends ActionBarActivity implements
         // Pass any configuration change to the drawer toggle
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
-	
+    
+    
+    
+    
 //	/**
 //	 * A placeholder fragment containing a simple view.
 //	 */
