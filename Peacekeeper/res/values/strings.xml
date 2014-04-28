@@ -106,7 +106,7 @@
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="currency_prompt">Choose a country</string>
     <string name="title_activity_accountSettings">Account settings</string>
     <string name="title_activity_notificationSettings">Notification settings</string>
@@ -120,5 +120,9 @@
     <string name="title_create_group">Create Group</string>
     <string name="title_join_group">Join Group</string>
     <string name="priceInput">Price:</string>
+    <string name="infoBox">
+        Here you can choose either to join or create a group. 
+        If roommates has a group created already, we strongly suggest you to join it.  
+    </string>
 
 </resources>
