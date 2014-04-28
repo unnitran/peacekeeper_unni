@@ -40,9 +40,6 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity implements
 		ActionBar.TabListener {
 	
-	//Git push test
-	//New git push test
-	//New new git push test
 	
 	/* -------- Sliding Menu -------- */
 	private DrawerLayout mDrawerLayout;
