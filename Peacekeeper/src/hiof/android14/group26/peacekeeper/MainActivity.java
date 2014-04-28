@@ -173,6 +173,11 @@ public class MainActivity extends ActionBarActivity implements
                 ViewPager view = (ViewPager) findViewById(R.id.pager);
                 view.setVisibility(View.GONE);
                 
+                //TODO: should change this later, probably not best practise
+                ActionBar actionBar = getSupportActionBar();
+        		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+                
+                
                 // calling onPrepareOptionsMenu() to hide action bar icons
                 invalidateOptionsMenu();
             }
@@ -213,6 +218,9 @@ public class MainActivity extends ActionBarActivity implements
         case R.id.add_task:
         	//TODO: remove toast, add activity
         	//Toast.makeText(this,"Menu item 2 selected",Toast.LENGTH_SHORT).show();
+        	ViewPager view = (ViewPager) findViewById(R.id.pager);
+            view.setVisibility(View.GONE);
+            
         	AddTaskFragment fragment = new AddTaskFragment();
         	changeFragment(fragment);
             break;
@@ -337,6 +345,10 @@ public class MainActivity extends ActionBarActivity implements
         switch (position) {
         case 0:
         	fragment = new HomeFragment();
+        	
+        	ActionBar actionBar = getSupportActionBar();
+    		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        	
         	ViewPager view = (ViewPager) findViewById(R.id.pager);
             view.setVisibility(View.VISIBLE);
             break;
@@ -358,11 +370,6 @@ public class MainActivity extends ActionBarActivity implements
  
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            
-            
-            
-            
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_container, fragment).commit();
  
@@ -377,6 +384,7 @@ public class MainActivity extends ActionBarActivity implements
         }
     }
     
+    //Method for changing fragment
     public void changeFragment(Fragment fragment){
     	if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
