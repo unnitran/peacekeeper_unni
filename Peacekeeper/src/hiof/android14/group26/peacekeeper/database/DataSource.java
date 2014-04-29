@@ -5,6 +5,7 @@ import java.util.List;
 
 import hiof.android14.group26.peacekeeper.models.Tasks;
 import hiof.android14.group26.peacekeeper.models.User;
+import hiof.android14.group26.peacekeeper.models.Household;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -191,7 +192,41 @@ public class DataSource {
 	 * Methods for handling households
 	 */
 	
+	//Create household
+	public Household createHousehold(String name){
+		ContentValues values = new ContentValues();
+		
+		values.put(HouseholdTable.COLUMN_NAME, name);
+		
+		long insertId = database.insert(HouseholdTable.TABLE_HOUSEHOLD, null, values);
+		
+		return getHousehold(insertId);
+	}
 	
+	//Get household
+	public Household getHousehold(long id){
+		Cursor cursor = database.query(
+				HouseholdTable.TABLE_HOUSEHOLD,
+				allHouseholdColumns, 
+				HouseholdTable.COLUMN_ID + " = " + id, 
+				null, null, null, null, null);
+		
+		cursor.moveToFirst();
+		Household household = cursorToHousehold(cursor);
+		cursor.close();
+		
+		return household;
+	}
+	
+	//Cursor to household
+	private Household cursorToHousehold(Cursor cursor){
+		Household house = new Household();
+		
+		house.setId(cursor.getInt(0));
+		house.setName(cursor.getString(1));
+		
+		return house;
+	}
 	
 	public void open() throws SQLException {
 		database = dbHelper.getWritableDatabase();

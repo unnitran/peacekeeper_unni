@@ -92,6 +92,9 @@ public class MainActivity extends ActionBarActivity implements
 		datasource = new DataSource(this);
 		datasource.open();
 		
+		CreateHousehold createHouse = new CreateHousehold();
+		createHouse.execute();
+		
 		CreateUser createUser = new CreateUser();
 		createUser.execute();
 		
