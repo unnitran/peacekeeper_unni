@@ -1,6 +1,6 @@
 package hiof.android14.group26.peacekeeper;
 
-import hiof.android14.group26.peacekeeper.database.TasksDataSource;
+import hiof.android14.group26.peacekeeper.database.DataSource;
 import hiof.android14.group26.peacekeeper.models.Tasks;
 import hiof.android14.group26.peacekeeper.slidingMenu.FinancialsFragment;
 import hiof.android14.group26.peacekeeper.slidingMenu.GroupFragment;
@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity implements
     private NavDrawerListAdapter adapter;
 	
     // database items
-    private static TasksDataSource datasource;
+    private static DataSource datasource;
 	
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -74,9 +74,10 @@ public class MainActivity extends ActionBarActivity implements
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
-	public static TasksDataSource getDatasource() {
+	public static DataSource getDatasource(){
 		return datasource;
 	}
+	
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -88,8 +89,11 @@ public class MainActivity extends ActionBarActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		datasource = new TasksDataSource(this);
+		datasource = new DataSource(this);
 		datasource.open();
+		
+		CreateUser createUser = new CreateUser();
+		createUser.execute();
 		
 		// Set up the action bar.
 		final ActionBar actionBar = getSupportActionBar();
@@ -168,6 +172,7 @@ public class MainActivity extends ActionBarActivity implements
         getActionBar().setDisplayHomeAsUpEnabled(true);
         // getActionBar().setHomeButtonEnabled(true);
  
+        
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
                 R.drawable.ic_drawer, //nav menu toggle icon
                 R.string.app_name, // nav drawer open - description for accessibility

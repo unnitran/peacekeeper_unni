@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteHelper extends SQLiteOpenHelper{
-	private static final String DATABASE_NAME = "show.db";
+	private static final String DATABASE_NAME = "peacekeeper.db";
 	private static final int DATABASE_VERSION = 2;
 
 	public SQLiteHelper(Context context) {

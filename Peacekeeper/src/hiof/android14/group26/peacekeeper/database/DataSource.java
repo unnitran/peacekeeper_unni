@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import hiof.android14.group26.peacekeeper.models.Tasks;
+import hiof.android14.group26.peacekeeper.models.User;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -14,7 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 //TODO: add remaining code for tasks (add another method for creating task where responsible is not null?)
 //TODO: add code for user, household and householdhastasks (might split this in different methods)
 
-public class TasksDataSource {
+public class DataSource {
 	private SQLiteDatabase database;
 	private SQLiteHelper dbHelper;
 	
@@ -27,14 +28,30 @@ public class TasksDataSource {
 					TaskTable.COLUMN_CREATOR,
 					TaskTable.COLUMN_RESPONSIBLE};
 					
+	private String[] allUsersColumns = {
+					UserTable.COLUMN_ID,
+					UserTable.COLUMN_FIRST_NAME,
+					UserTable.COLUMN_LAST_NAME,
+					UserTable.COLUMN_EMAIL,
+					UserTable.COLUMN_PASSWORD,
+					UserTable.COLUMN_HOUSEHOLD_ID};
+	
+	private String[] allHouseholdColumns = {
+					HouseholdTable.COLUMN_ID,
+					HouseholdTable.COLUMN_NAME
+	};
+	
 	private String[] allHouseholdHasTasksColumns = {
 					HouseholdHasTasksTable.COLUMN_TASK_ID,
 					HouseholdHasTasksTable.COLUMN_HOUSEHOLD_ID};
 
-	public TasksDataSource(Context context) {
+	public DataSource(Context context) {
 		dbHelper = new SQLiteHelper(context);
 	}
 	
+	/*
+	 * Methods for handling tasks
+	 */
 	
 	//Create task without responsible household member
 	public Tasks createTaskNoResponsibleHouseholdMember(String description, double price, String creation_date, String due_date, int creator){
@@ -53,7 +70,7 @@ public class TasksDataSource {
 	
 	//Create task with responsible household member
 	public Tasks createTaskResponsibleHouseholdMember(String description, int price, String creation_date, String due_date, String creator, String responsible){
-ContentValues values = new ContentValues();
+		ContentValues values = new ContentValues();
 		
 		values.put(TaskTable.COLUMN_DESCRIPTION, description);
 		values.put(TaskTable.COLUMN_CREATION_DATE, creation_date);
@@ -66,8 +83,6 @@ ContentValues values = new ContentValues();
 		
 		return getTask(insertId);
 	}
-	
-	
 	
 	//Get single task
 	public Tasks getTask(long id){
@@ -122,6 +137,61 @@ ContentValues values = new ContentValues();
 		
 		return task;
 	}
+	
+	/*
+	 * Methods for handling users
+	 */
+	
+	//Create user
+	public User createUser(String fname, String lname, String email, String password, int household){
+		
+		ContentValues values = new ContentValues();
+		
+		values.put(UserTable.COLUMN_FIRST_NAME, fname);
+		values.put(UserTable.COLUMN_LAST_NAME, lname);
+		values.put(UserTable.COLUMN_EMAIL, email);
+		values.put(UserTable.COLUMN_PASSWORD, password);
+		values.put(UserTable.COLUMN_HOUSEHOLD_ID, household);
+		
+		long insertId = database.insert(UserTable.TABLE_USER, null, values);
+		
+		return getUser(insertId);
+	}
+	
+	//Get user
+	public User getUser(long id){
+		Cursor cursor = database.query(
+				UserTable.TABLE_USER,
+				allUsersColumns, 
+				UserTable.COLUMN_ID + " = " + id, 
+				null, null, null, null, null);
+		
+		cursor.moveToFirst();
+		User user = cursorToUser(cursor);
+		cursor.close();
+		
+		return user;
+	}
+	
+	//Cursor to user
+	private User cursorToUser(Cursor cursor){
+		User user = new User();
+		
+		user.setId(cursor.getInt(0));
+		user.setFname(cursor.getString(1));
+		user.setLname(cursor.getString(2));
+		user.setEmail(cursor.getString(3));
+		user.setPassword(cursor.getString(4));
+		user.setHousehold_id(cursor.getInt(5));
+		
+		return user;
+	}
+	
+	/*
+	 * Methods for handling households
+	 */
+	
+	
 	
 	public void open() throws SQLException {
 		database = dbHelper.getWritableDatabase();
