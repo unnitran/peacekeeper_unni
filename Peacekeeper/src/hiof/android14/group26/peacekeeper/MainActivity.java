@@ -192,6 +192,11 @@ public class MainActivity extends ActionBarActivity implements
 		startActivity(intent);
 	}
 	
+	public void startLeaveGroupActivity(View view) {
+		Intent intent = new Intent(this, IntroGroupActivity.class);
+		startActivity(intent);
+	}
+	
 	public void startLogOutActivity(View view) {
 		Intent intent = new Intent(this, LogOutActivity.class);
 		startActivity(intent);
