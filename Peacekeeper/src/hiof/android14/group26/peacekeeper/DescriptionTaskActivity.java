@@ -9,6 +9,6 @@ public class DescriptionTaskActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.financial_description);
+		setContentView(R.layout.main_task);
 	}
 }
