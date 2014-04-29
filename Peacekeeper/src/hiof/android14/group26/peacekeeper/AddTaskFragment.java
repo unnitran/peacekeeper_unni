@@ -16,8 +16,7 @@ public class AddTaskFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 		
-		CreateTask createTask = new CreateTask();
-		createTask.execute();
+		
 		
 		
         // Inflate the layout for this fragment

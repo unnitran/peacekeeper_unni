@@ -98,6 +98,9 @@ public class MainActivity extends ActionBarActivity implements
 		CreateUser createUser = new CreateUser();
 		createUser.execute();
 		
+		CreateTask createTask = new CreateTask();
+		createTask.execute();
+		
 		// Set up the action bar.
 		final ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

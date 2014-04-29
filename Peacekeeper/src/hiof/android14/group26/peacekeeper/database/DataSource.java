@@ -59,10 +59,11 @@ public class DataSource {
 		ContentValues values = new ContentValues();
 		
 		values.put(TaskTable.COLUMN_DESCRIPTION, description);
-		values.put(TaskTable.COLUMN_CREATION_DATE, creation_date);
 		values.put(TaskTable.COLUMN_PRICE, price);
+		values.put(TaskTable.COLUMN_CREATION_DATE, creation_date);
 		values.put(TaskTable.COLUMN_DUE_DATE, due_date);
 		values.put(TaskTable.COLUMN_CREATOR, creator);
+		values.put(TaskTable.COLUMN_RESPONSIBLE, creator);
 		
 		long insertId = database.insert(TaskTable.TABLE_TASK, null, values);
 		
@@ -132,9 +133,11 @@ public class DataSource {
 		
 		task.setId(cursor.getInt(0));
 		task.setDescription(cursor.getString(1));
-		task.setCreation_date(cursor.getString(2));
-		task.setDue_date(cursor.getString(3));
-		task.setCreator_id(cursor.getInt(4));
+		task.setPrice(cursor.getFloat(2));
+		task.setCreation_date(cursor.getString(3));
+		task.setDue_date(cursor.getString(4));
+		task.setCreator_id(cursor.getInt(5));
+		task.setResponsible_id(cursor.getInt(6));
 		
 		return task;
 	}

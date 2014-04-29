@@ -39,7 +39,7 @@ public class TasksListAdapter extends ArrayAdapter<Tasks>{
 				due_date.setText(task.getDue_date());
 			}
 			if(responsible != null){
-				responsible.setText(task.getResponsible_id());
+				responsible.setText("test");
 			}
 		}
 		
