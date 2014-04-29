@@ -21,7 +21,7 @@
     <string name="addPicture">Add picture</string>
     <string name="takePhoto">Take photo</string>
     <string name="addTask">Add task</string>
-    <string name="description">Description</string>
+    
     <string name="searchGN">Search by group name</string>
     <string name="leilighet">Leilighet 23B</string>
     <string name="logo">Logo</string>
@@ -75,6 +75,10 @@
     <string name="addTask2">When a task is added</string>
     <string name="taskEdited">When a task is edited</string>
     <string name="taskFinished">When a task is finished</string>
+    <string name="addTaskPrice">Price</string>
+    <string name="addTaskDescription">Task Description</string>
+    <string name="addTaskDueDate">Due date</string>
+    <string name="addTaskResponsible">Responsible</string>
 
     <string-array name="currency_arrays">
         <item>NOK</item>

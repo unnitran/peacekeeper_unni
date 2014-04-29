@@ -1,5 +1,6 @@
 package hiof.android14.group26.peacekeeper.models;
 
+import hiof.android14.group26.peacekeeper.MainActivity;
 import hiof.android14.group26.peacekeeper.R;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -39,7 +40,7 @@ public class TasksListAdapter extends ArrayAdapter<Tasks>{
 				due_date.setText(task.getDue_date());
 			}
 			if(responsible != null){
-				responsible.setText("test");
+				responsible.setText(MainActivity.getDatasource().getUser(task.getId()).getFname()+"");
 			}
 		}
 		

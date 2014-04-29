@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp" >
+        android:layout_marginTop="10dp" >
 
         <Button
             android:id="@+id/buttonLoadPicture"
@@ -53,31 +53,63 @@
         android:layout_height="wrap_content" >
 
         <EditText
-            android:id="@+id/editText1"
-            android:layout_marginTop="30dp"
+            android:id="@+id/addTaskDescriptionEditText"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
-            android:text="@string/name"
+            android:hint="@string/addTaskDescription"
             android:inputType="text"
-            android:ems="10" >
+            android:ems="8" >
 
             <requestFocus />
         </EditText>
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/addTaskPriceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="8"
+            android:layout_below="@+id/addTaskDescriptionEditText"
+            android:inputType="textMultiLine"
+            android:hint="@string/addTaskPrice" />
+        
+        <EditText
+            android:id="@+id/addTaskDueDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="8"
+            android:layout_below="@+id/addTaskPriceEditText"
+            android:inputType="date"
+            android:hint="@string/addTaskDueDate" />
+        
+        <EditText
+            android:id="@+id/addTaskResponsibleEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="8"
+            android:layout_below="@+id/addTaskDueDateEditText"
+            android:inputType="text"
+            android:hint="@string/addTaskResponsible" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:ems="10"
-        android:text="@string/description"
-        android:inputType="textMultiLine" />
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addTaskResponsibleEditText"
+            android:text="Add task" />
+
+    </RelativeLayout>
 
 </LinearLayout>
