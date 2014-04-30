@@ -5,9 +5,9 @@ import android.os.AsyncTask;
 
 public class CreateTask extends AsyncTask<Void, Void, Tasks>{
 
-	CreateTask(String desc, double price, String creationDate, String dueDate){
-		
-	}
+//	CreateTask(String desc, double price, String creationDate, String dueDate){
+//		
+//	}
 	
 	@Override
 	protected Tasks doInBackground(Void... params) {

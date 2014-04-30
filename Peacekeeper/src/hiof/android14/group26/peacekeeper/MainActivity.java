@@ -98,7 +98,7 @@ public class MainActivity extends ActionBarActivity implements
 		CreateUser createUser = new CreateUser();
 		createUser.execute();
 		
-		//CreateTask createTask = new CreateTask();
+		CreateTask createTask = new CreateTask();
 		createTask.execute();
 		
 		// Set up the action bar.
